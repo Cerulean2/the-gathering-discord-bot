@@ -33,10 +33,10 @@ async def on_ready():
     
 @bot.event
 async def on_command_error(ctx, error):
-    """Sends an error message to a member when they do not have proper permissions."""
+    """Sends an error message to a member when they do not have proper permissions to run a command."""
     if isinstance(error, commands.errors.CheckFailure):
         await ctx.message.delete() # Delete the invoking command message
-        embed = discord.Embed(title="Sorry, command denied! :no_entry:", description=f"{ctx.author.mention}, you do not have the required permissions to use this command.", color=0xff0000)
+        embed = discord.Embed(title="Sorry, command denied! :no_entry:", description=f"{ctx.author.mention}, you don't have permissions to use this command.", color=0xff0000)
         
         server_icon = ctx.guild.icon.url
         embed.set_footer(text="The Gathering", icon_url=server_icon)
