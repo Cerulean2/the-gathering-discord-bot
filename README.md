@@ -20,7 +20,7 @@ Welcome to The Gathering Discord Bot! This bot is made using Python3 and the dis
 ## Setup
 1. Clone this repository to your local machine.
 
-git clone https://github.com/<your-github-username>/the-gathering-discord-bot.git
+git clone https://github.com/<Cerulean2>/the-gathering-discord-bot.git
 
 markdown
 
