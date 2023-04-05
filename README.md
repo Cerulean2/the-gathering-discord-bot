@@ -42,4 +42,4 @@ Welcome to The Gathering Discord Bot! This bot is made using Python3 and the dis
 To contribute to The Gathering Discord Bot, please open a pull request with your proposed changes. All contributions are welcome!
 
 ## License
-This project is licensed under the [MIT license](https://github.com/<your-github-username>/the
+This project is licensed under the [MIT license](https://github.com/Cerulean2/the-gathering-discord-bot/blob/main/LICENSE)
