@@ -30,7 +30,7 @@ Welcome to The Gathering Discord Bot! This bot is made using Python3 and the dis
 
 ![image](https://user-images.githubusercontent.com/91349881/230167530-412a7411-f92b-4523-a357-53018c76f008.png)
 
-4. Copy your bot token and paste it into an `.env` file at the root of the directory with this syntax.
+4. Copy your bot token and paste it into the `.env` file at the root of the directory.
 
 `DISCORD_TOKEN = YOUR_TOKEN`
 
