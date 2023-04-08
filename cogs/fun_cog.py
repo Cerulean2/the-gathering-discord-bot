@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-import random 
+import random,requests
 
 class Fun(commands.Cog):
     def __init__(self, bot):
@@ -48,20 +48,27 @@ class Fun(commands.Cog):
     @commands.command()
     async def quote(self, ctx):
         """Responds with a random famous quote."""
-        quotes = [
-            "The greatest glory in living lies not in never falling, but in rising every time we fall. -Nelson Mandela",
-            "The way to get started is to quit talking and begin doing. -Walt Disney",
-            "Your time is limited, don't waste it living someone else's life. -Steve Jobs",
-            "If life were predictable it would cease to be life, and be without flavor. -Eleanor Roosevelt",
-            "If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough. -Oprah Winfrey",
-            "If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success. -James Cameron",
-            "Life is what happens when you're busy making other plans. -John Lennon",
-            "Spread love everywhere you go. Let no one ever come to you without leaving happier. -Mother Teresa",
-            "When you reach the end of your rope, tie a knot in it and hang on. -Franklin D. Roosevelt",
-            "In the end, it's not the years in your life that count. It's the life in your years. -Abraham Lincoln",
-            "Believe you can and you're halfway there. -Theodore Roosevelt"
-        ]
-        await ctx.send(random.choice(quotes))
+        try:
+            response = requests.get('https://api.quotable.io/random')
+            data = response.json()
+            content = f"{data['content']} -{data['author']}"
+            await ctx.send(content)
+        except Exception as e:
+            print(f"An error occurred while fetching the quote: {e}")
+
+    @commands.command()
+    async def meme(self,ctx):
+        """Generates a random meme."""
+        try:
+            response = requests.get('https://meme-api.com/gimme')
+            data = response.json()
+            meme_url = data['url']
+            embed = discord.Embed(title='Random Meme', color=random.randint(0, 0xFFFFFF))
+            embed.set_image(url=meme_url)
+            await ctx.send(embed=embed)
+        except Exception as e:
+
+            print(f"An error occurred while fetching the meme: {e}")
 
 async def setup(bot):
     await bot.add_cog(Fun(bot))
