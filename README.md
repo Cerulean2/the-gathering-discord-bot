@@ -2,7 +2,7 @@
 
 [![Python](https://img.shields.io/badge/python-v3.9-blue)](https://www.python.org/downloads/release/python-390/)
 [![Discord](https://img.shields.io/badge/discord.py-v2.0.0-blue.svg)](https://discordpy.readthedocs.io/en/latest/index.html)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/<your-github-username>/the-gathering-discord-bot/blob/main/LICENSE)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 Welcome to The Gathering Discord Bot! This bot is made using Python3 and the discord library, designed for the The Gathering community server. It comes equipped with a set of routine staff and moderation commands, as well as a variety of embeds for important information about the server and its community. 
 
